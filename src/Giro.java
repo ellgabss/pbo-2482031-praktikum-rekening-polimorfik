@@ -17,6 +17,11 @@ public class Giro extends Rekening {
     }
 
     @Override
+    public int biayaAdminBulanan() {
+        return 15000;
+    }
+
+    @Override
     public void cetakInfo() {
         super.cetakInfo();
         System.out.println("      Giro, batas overdraft " + formatRupiah(batasOverdraft));

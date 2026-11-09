@@ -35,6 +35,16 @@ public class Rekening {
         saldo -= jumlah;
         return true;
     }
+
+
+    public abstract int biayaAdminBulanan();
+
+    public int potongBiayaAdmin() {
+        int biaya = biayaAdminBulanan();
+        saldo -= biaya;
+        return biaya;
+    }
+
     public void cetakInfo() {
         System.out.println(nomor + " | " + String.format("%-6s", pemilik) + " | "
                 + String.format("%12s", formatRupiah(saldo)));

@@ -14,6 +14,11 @@ public class Tabungan extends Rekening {
     }
 
     @Override
+    public int biayaAdminBulanan() {
+        return saldo >= 1000000 ? 0 : 5000;
+    }
+
+    @Override
     public void cetakInfo() {
         super.cetakInfo();
         System.out.println("      Tabungan, bunga " + bungaPersen + "% per bulan");
