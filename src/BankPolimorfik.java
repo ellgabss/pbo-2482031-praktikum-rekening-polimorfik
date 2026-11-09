@@ -8,6 +8,7 @@ public class BankPolimorfik {
         Rekening[] semua = {ani, citra, budi};
         BerBunga[] berbunga = { ani, citra };
         //Percobaan: Rekening r = new Rekening("999", "Eko", 0);
+        // Baris percobaan dijadikan komentar supaya program bisa di-compile lagi.
         //Pesan error: Rekening is not abstract and does not override abstract method biayaAdminBulanan() in Rekening
 
 
