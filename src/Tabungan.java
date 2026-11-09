@@ -1,4 +1,4 @@
-public class Tabungan extends Rekening {
+public class Tabungan extends Rekening implements BerBunga {
 
     private double bungaPersen;
 
@@ -7,6 +7,7 @@ public class Tabungan extends Rekening {
         this.bungaPersen = bungaPersen;
     }
 
+    @Override
     public int tambahBunga() {
         int bunga = (int) (saldo * bungaPersen / 100);
         setor(bunga);

@@ -6,6 +6,7 @@ public class BankPolimorfik {
         Giro budi = new Giro("201", "Budi", 200000, 500000);
 
         Rekening[] semua = {ani, citra, budi};
+        BerBunga[] berbunga = { ani, citra };
         //Percobaan: Rekening r = new Rekening("999", "Eko", 0);
         //Pesan error: Rekening is not abstract and does not override abstract method biayaAdminBulanan() in Rekening
 
@@ -20,6 +21,19 @@ public class BankPolimorfik {
         for (Rekening rek : semua) {
             System.out.println(rek.getNomor() + " biaya admin  : " + Rekening.formatRupiah(rek.potongBiayaAdmin()));
         }
+        for (BerBunga b : berbunga) {
+            System.out.println(b.getNomor() + " bunga        : " + Rekening.formatRupiah(b.tambahBunga()));
+        }
+
+        System.out.println();
+        System.out.println("========== REKENING AKHIR =========");
+        int total = 0;
+        for (Rekening rek : semua) {
+            rek.cetakInfo();
+            total += rek.getSaldo();
+        }
+        System.out.println("-----------------------------------");
+        System.out.println("Total dana bank : " + Rekening.formatRupiah(total));
     }
 }
 
